@@ -17,20 +17,20 @@
       <div class="microphone-icon">🎤</div>
       <p class="permission-text">Ready to capture the last 30 seconds of audio at any moment?</p>
       <p class="privacy-text">Click below to start continuous listening. Press the record button anytime to save the previous 30 seconds. All audio stays private on your device.</p>
-      <button class="enable-btn" onclick="startListening()">Start Listening</button>
+      <button class="enable-btn" id="enableBtn">Start Listening</button>
     </div>
 
     <!-- Main App -->
     <div id="mainApp" class="screen hidden">
       <div class="status-card">
         <div class="status-indicator">
-          <div class="status-dot listening"></div>
+          <div class="status-dot"></div>
           <span class="status-text">Listening continuously...</span>
         </div>
         <div class="guidance-text">Press the button below anytime to save the last 30 seconds of audio</div>
       </div>
       <div class="controls">
-        <button class="record-button listening" onclick="saveLast30Seconds()">
+        <button class="record-button" id="recordBtn">
           <div class="button-icon">💾</div>
           <div class="button-text">Save Last 30s</div>
         </button>
@@ -38,6 +38,6 @@
     </div>
   </div>
 
-  <script src="app.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
