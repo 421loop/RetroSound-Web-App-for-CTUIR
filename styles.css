@@ -69,6 +69,7 @@ body {
   background: #22c55e;
   color: white;
   padding: 20px 40px;
+  border: none;
   border-radius: 50px;
   font-size: 1.3rem;
   font-weight: 600;
@@ -85,6 +86,14 @@ body {
   padding: 30px;
   border-radius: 20px;
   margin-bottom: 20px;
+  color: #333;
+}
+
+.status-indicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
 }
 
 .status-dot {
@@ -92,7 +101,28 @@ body {
   height: 12px;
   border-radius: 50%;
   margin-right: 10px;
-  background: #ff7b4d;
+  background: #22c55e;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+.status-text {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.guidance-text {
+  font-size: 1rem;
+  color: #666;
+}
+
+.controls {
+  margin-top: 30px;
 }
 
 .record-button {
@@ -105,10 +135,29 @@ body {
   border-radius: 50%;
   box-shadow: 0 10px 30px rgba(255, 123, 77, 0.4);
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.1s ease;
+}
+
+.record-button:hover {
+  transform: scale(1.05);
 }
 
 .record-button:active {
   transform: scale(0.95);
+}
+
+.button-icon {
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+.button-text {
+  font-size: 0.9rem;
+  font-weight: 600;
 }
 
 .hidden {
