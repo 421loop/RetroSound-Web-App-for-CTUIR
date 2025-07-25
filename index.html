@@ -17,7 +17,7 @@
       <div class="microphone-icon">🎤</div>
       <p class="permission-text">Ready to capture the last 30 seconds of audio at any moment?</p>
       <p class="privacy-text">Click below to start continuous listening. Press the record button anytime to save the previous 30 seconds. All audio stays private on your device.</p>
-      <button class="enable-btn" id="enableBtn">Start Listening</button>
+      <button class="enable-btn" onclick="startListening()">Start Listening</button>
     </div>
 
     <!-- Main App -->
@@ -30,7 +30,7 @@
         <div class="guidance-text">Press the button below anytime to save the last 30 seconds of audio</div>
       </div>
       <div class="controls">
-        <button class="record-button" id="recordBtn">
+        <button class="record-button" onclick="saveLast30Seconds()">
           <div class="button-icon">💾</div>
           <div class="button-text">Save Last 30s</div>
         </button>
